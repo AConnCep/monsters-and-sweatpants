@@ -48,7 +48,7 @@ namespace Monsters_and_Sweatpants
             {
                 case 0:
                     Console.WriteLine();
-                    Console.WriteLine("The monster is attacking your oponent");
+                    Console.WriteLine("The monster is attacking your opponent");
                     Attack(computer);
                     break;
                 case 1:
@@ -146,7 +146,7 @@ namespace Monsters_and_Sweatpants
             {
                 case 0:
                     Console.WriteLine();
-                    Console.WriteLine("The monster is attacking your oponent");
+                    Console.WriteLine("The monster is attacking your opponent");
                     Attack(computer);
                     break;
                 case 1:
@@ -244,7 +244,7 @@ namespace Monsters_and_Sweatpants
             {
                 case 0:
                     Console.WriteLine();
-                    Console.WriteLine("The monster is attacking your oponent");
+                    Console.WriteLine("The monster is attacking your opponent");
                     Attack(computer);
                     break;
                 case 1:
@@ -341,7 +341,7 @@ namespace Monsters_and_Sweatpants
             {
                 case 0:
                     Console.WriteLine();
-                    Console.WriteLine("The monster is attacking your oponent");
+                    Console.WriteLine("The monster is attacking your opponent");
                     Attack(computer);
                     break;
                 case 1:

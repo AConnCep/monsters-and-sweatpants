@@ -10,8 +10,13 @@ namespace Monsters_and_Sweatpants
     {
         public static void MainMenu()
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("~~~~MAIN MENU~~~~");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Welcome to Monsters and Sweatpants, a competitive co-op by Austin Cepalia");
+            Console.WriteLine();
             Console.WriteLine("Please make a selection");
             Console.WriteLine("1. Play Game");
             Console.WriteLine("2. How to Play");
@@ -19,6 +24,7 @@ namespace Monsters_and_Sweatpants
             Console.WriteLine("4. Defense Card Info");
             Console.WriteLine("5. Monster Info");
             Console.WriteLine("6. Quit Game");
+            Console.WriteLine();
 
             int userChoice = Int32.Parse(Console.ReadLine());
 
@@ -48,7 +54,11 @@ namespace Monsters_and_Sweatpants
 
         public static void HowToPlay()
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("~~~~HOW TO PLAY~~~~");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("In this game, you face your teammate in defeating a randomly-generated monster");
             Console.WriteLine("There are four monsters. Some are more powerful than others");
             Console.WriteLine("You are randomly assigned 5 attack cards and 5 defense cards. These cards give you your strength and defense abilities");
@@ -88,7 +98,11 @@ namespace Monsters_and_Sweatpants
 
         public static void AttackCardInfo()
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("~~~~ATTACK CARDS~~~~");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("The following cards can be mounted to give you various amounts of strength");
             Console.WriteLine();
             Console.WriteLine("Mega Godsent Strength: 10 HP");
@@ -106,7 +120,11 @@ namespace Monsters_and_Sweatpants
 
         public static void DefenseCardInfo()
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("~~~~DEFENSE CARDS~~~~");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("The following cards can be mounted to give you various amounts of defense");
             Console.WriteLine();
             Console.WriteLine("Near-Invincibility: 95% chance of deflect");
@@ -124,7 +142,11 @@ namespace Monsters_and_Sweatpants
 
         public static void MonsterInfo()
         {
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("~~~~MONSTERS~~~~");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Upon your quest you shall stumble upon one of these four monsters. Good luck");
             Console.WriteLine();
             Console.WriteLine("Goblin of Goo - 10 HP");
@@ -144,8 +166,11 @@ namespace Monsters_and_Sweatpants
         public static void EndOfRoundStats(UserPlayer user, AIPlayer computer, IMonsterable monster)
         {
             Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("~~~~END OF ROUND STATISTICS~~~~");
             Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Your health: " + user.Health + " HP");
             Console.WriteLine("Your score: " + user.Score + " points");
             Console.WriteLine("Opponent's health: " + computer.Health + " HP");
