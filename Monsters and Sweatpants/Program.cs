@@ -96,6 +96,7 @@ namespace Monsters_and_Sweatpants
 
             }
             else { Menus.ExitGame(); }
+            Console.ReadLine();
         }
     }
 }

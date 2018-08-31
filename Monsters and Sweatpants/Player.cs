@@ -345,7 +345,7 @@ namespace Monsters_and_Sweatpants
 
         public void AIPicksTypeOfCard()
         {
-            switch (new Random().Next(0, 1))
+            switch (new Random().Next(0, 2))
             {
                 case 0:
                     ChooseAttackCard();

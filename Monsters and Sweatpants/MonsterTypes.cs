@@ -8,7 +8,7 @@ namespace Monsters_and_Sweatpants
 {
     class GoblinOfGoo : IMonsterable
     {
-        public int Health { get; set; } = 350;
+        public int Health { get; set; } = 250;
         public int Strength { get; set; } = 5;
         public double Defense { get; set; } = 0.2;
 
@@ -17,6 +17,7 @@ namespace Monsters_and_Sweatpants
             Console.WriteLine("A Goblin of Goo approaches!");
             PrintMonsterStats();
         }
+        
 
         protected Random r = new Random();
         protected int generatePlayerNumber => r.Next(0, 2);
@@ -26,7 +27,7 @@ namespace Monsters_and_Sweatpants
         public void PickPlayerToAttack(Player user, Player computer)
         {
             int previousUserAttacked = 0;
-            int monsterChoice = r.Next(0, 1);
+            int monsterChoice = r.Next(0, 2);
             switch (monsterChoice)
             {
                 case 0:
@@ -39,7 +40,7 @@ namespace Monsters_and_Sweatpants
                     Console.WriteLine();
                     Console.WriteLine("The monster is attacking your opponent first");
                     Attack(computer);
-                    previousUserAttacked = 0;
+                    previousUserAttacked = 1;
                     break;
             }
 
@@ -112,7 +113,7 @@ namespace Monsters_and_Sweatpants
             Console.WriteLine("A Troll of Tribulation approaches!");
             PrintMonsterStats();
         }
-        public int Health { get; set; } = 500;
+        public int Health { get; set; } = 350;
         public int Strength { get; set; } = 10;
         public double Defense { get; set; } = 0.4;
 
@@ -124,7 +125,7 @@ namespace Monsters_and_Sweatpants
         public void PickPlayerToAttack(Player user, Player computer)
         {
             int previousUserAttacked = 0;
-            int monsterChoice = r.Next(0, 1);
+            int monsterChoice = r.Next(0, 2);
             switch (monsterChoice)
             {
                 case 0:
@@ -137,7 +138,7 @@ namespace Monsters_and_Sweatpants
                     Console.WriteLine();
                     Console.WriteLine("The monster is attacking your opponent first");
                     Attack(computer);
-                    previousUserAttacked = 0;
+                    previousUserAttacked = 1;
                     break;
             }
 
@@ -210,7 +211,7 @@ namespace Monsters_and_Sweatpants
             Console.WriteLine("An Orc of Ordeal approaches!");
             PrintMonsterStats();
         }
-        public int Health { get; set; } = 700;
+        public int Health { get; set; } = 500;
         public int Strength { get; set; } = 15;
         public double Defense { get; set; } = 0.6;
 
@@ -222,7 +223,7 @@ namespace Monsters_and_Sweatpants
         public void PickPlayerToAttack(Player user, Player computer)
         {
             int previousUserAttacked = 0;
-            int monsterChoice = r.Next(0, 1);
+            int monsterChoice = r.Next(0, 2);
             switch (monsterChoice)
             {
                 case 0:
@@ -235,7 +236,7 @@ namespace Monsters_and_Sweatpants
                     Console.WriteLine();
                     Console.WriteLine("The monster is attacking your opponent first");
                     Attack(computer);
-                    previousUserAttacked = 0;
+                    previousUserAttacked = 1;
                     break;
             }
 
@@ -307,7 +308,7 @@ namespace Monsters_and_Sweatpants
             Console.WriteLine("A Dragon of Death approaches!");
             PrintMonsterStats();
         }
-        public int Health { get; set; } = 1000;
+        public int Health { get; set; } = 650;
         public int Strength { get; set; } = 20;
         public double Defense { get; set; } = 0.7;
 
@@ -319,7 +320,7 @@ namespace Monsters_and_Sweatpants
         public void PickPlayerToAttack(Player user, Player computer)
         {
             int previousUserAttacked = 0;
-            int monsterChoice = r.Next(0, 1);
+            int monsterChoice = r.Next(0, 2);
             switch (monsterChoice)
             {
                 case 0:
@@ -332,7 +333,7 @@ namespace Monsters_and_Sweatpants
                     Console.WriteLine();
                     Console.WriteLine("The monster is attacking your opponent first");
                     Attack(computer);
-                    previousUserAttacked = 0;
+                    previousUserAttacked = 1;
                     break;
             }
 
