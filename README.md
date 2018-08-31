@@ -10,3 +10,4 @@ To-do:
 - [ ] Play multiple rounds against the computer (best out of 3, best out of 5, etc.)
 - [ ] Save game data to a file for statistics generation (high score, rounds played, rounds won, rounds lost, etc.)
 - [ ] Allow the player to create their own cards and mosters for use within the game
+- [ ] Replace most of the exceptions with events and event handlers
