@@ -1,7 +1,0 @@
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\bin\Debug\Monsters and Sweatpants.exe.config
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\bin\Debug\Monsters and Sweatpants.exe
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\bin\Debug\Monsters and Sweatpants.pdb
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\obj\Debug\Monsters and Sweatpants.csproj.CoreCompileInputs.cache
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\obj\Debug\Monsters and Sweatpants.exe
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\obj\Debug\Monsters and Sweatpants.pdb
-C:\Users\austi\source\repos\Monsters and Sweatpants\Monsters and Sweatpants\obj\Debug\Monsters and Sweatpants.csprojAssemblyReference.cache
