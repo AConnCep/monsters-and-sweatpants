@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Monsters_and_Sweatpants
 {
@@ -31,8 +31,7 @@ namespace Monsters_and_Sweatpants
             switch (userChoice)
             {
                 case 1:
-                    Console.WriteLine("Onward!");
-                    Program.PlayGame();
+                    SelectNumberOfRounds();
                     break;
                 case 2:
                     HowToPlay();
@@ -50,6 +49,32 @@ namespace Monsters_and_Sweatpants
                     ExitGame();
                     break;
             }
+        }
+
+        public static void SelectNumberOfRounds()
+        {
+            Console.WriteLine("How many rounds would you like to play?");
+            Console.WriteLine("1. Just one round");
+            Console.WriteLine("2. Best out of three");
+            Console.WriteLine("3. Best out of five");
+            int userChoice = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Onward!");
+            Thread.Sleep(1000);
+            switch (userChoice)
+            {
+                case 1:
+                    Program.StartRounds(1);
+                    break;
+
+                case 2:
+                    Program.StartRounds(3);
+                    break;
+                    
+                case 3:
+                    Program.StartRounds(5);
+                    break;
+            }
+
         }
 
         public static void HowToPlay()

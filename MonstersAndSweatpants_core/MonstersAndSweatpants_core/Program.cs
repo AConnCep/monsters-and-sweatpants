@@ -14,19 +14,48 @@ namespace Monsters_and_Sweatpants
             Menus.MainMenu();
         }
 
-        public static void PlayGame()
+        public static void StartRounds(int roundCount)
+        {
+            if (roundCount == 1)
+            {
+                PlayGame();
+            }
+            else 
+            {
+                int roundsWon = 0;
+                int roundsLost = 0;
+                int halfway = (int)Math.Ceiling(roundCount / 2.0); // how many games player needs to win to be victorious
+                for (int roundsPlayed = 0; roundsPlayed < roundCount; roundsPlayed++) 
+                {
+                    if (PlayGame() == true)
+                    {
+                        roundsWon++;
+                    }
+                    else 
+                    {
+                        roundsLost++;
+                    }
+                    if (roundsWon >= halfway)
+                    {
+                        Console.WriteLine("You won " + roundsWon + " rounds and are victorious!");
+                        break;
+                    }
+                    if (roundsLost >= halfway)
+                    {
+                        Console.WriteLine("You lost " + roundsLost + " rounds and therefore have lost the whole game :(");
+                        break;
+                    }
+                }
+
+            }
+        }
+
+        public static bool PlayGame()
         {
             UserPlayer userPlayer = new UserPlayer();
             AIPlayer computerPlayer = new AIPlayer();
             Console.WriteLine();
-            try
-            {
-                Console.WriteLine("Ready to start? [y/n]");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine("Ready to start? [y/n]");
             string userInput = Console.ReadLine();
             if (userInput.Equals("y"))
             {
@@ -51,16 +80,19 @@ namespace Monsters_and_Sweatpants
                         Menus.EndOfRoundStats(userPlayer, computerPlayer, m);
 
                     }
+
                 }
                 catch (UserDiedException e)
                 {
                     Console.WriteLine(e.Message);
                     Console.WriteLine("You lose!");
+                    return false;
                 }
                 catch (AIDiedException e)
                 {
                     Console.WriteLine(e.Message);
                     Console.WriteLine("You win!");
+                    return true;
                 }
                 //catch (MonsterDiedException e)
                 //{
@@ -83,20 +115,24 @@ namespace Monsters_and_Sweatpants
                 catch (UserKilled)
                 {
                     Console.WriteLine("You killed the monster! You win!");
+                    return true;
                 }
                 catch (AIKilled)
                 {
                     Console.WriteLine("Your opponent killed the monster! You lose!");
+                    return false;
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("An unhandled exception occurred");
+                    return false;
                 }
 
 
             }
             else { Menus.ExitGame(); }
             Console.ReadLine();
+            return false;
         }
     }
 }
