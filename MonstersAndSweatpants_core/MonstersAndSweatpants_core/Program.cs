@@ -111,10 +111,17 @@ namespace Monsters_and_Sweatpants
                 catch (Exception)
                 {
                     Console.WriteLine("An unhandled exception occurred");
-                    return false;
+                    Thread.Sleep(delayConstant);
+                    CardDealer.ResetDealer();
+                    PlayGame();
                 }
             }
-            else { Menus.ExitGame(); }
+            else 
+            {
+                Console.WriteLine("Sorry, this is not a game for quitters! ¯|_(ツ)_|¯");
+                CardDealer.ResetDealer();
+                PlayGame();
+            }
             Console.ReadLine();
             return false;
         }
