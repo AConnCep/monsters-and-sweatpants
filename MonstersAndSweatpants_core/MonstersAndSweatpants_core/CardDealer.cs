@@ -53,6 +53,7 @@ namespace Monsters_and_Sweatpants
             StockDeck();
         }
 
+        // for intially stocking the player's deck at the beginning of a game
         public static void GenerateCard(Player player, CardType cardType)
         {
             Random r = new Random();
@@ -62,18 +63,17 @@ namespace Monsters_and_Sweatpants
                 int randomChoice = r.Next(0, attackCards.Count);
                 player.playerAttackCards.Add(attackCards[randomChoice]);
                 attackCards.RemoveAt(randomChoice);
-                
             }
             else if (cardType == CardType.DefenseCard)
             {
                 int randomChoice = r.Next(0, defenseCards.Count);
                 player.playerDefenseCards.Add(defenseCards[randomChoice]);
-                defenseCards.RemoveAt(randomChoice);
-                
+                defenseCards.RemoveAt(randomChoice);  
             }
             
         }
 
+        // for generating an attack card mid-game
         public static AttackCard GenerateAttackCard(Player player)
         {
             Random r = new Random();
@@ -83,6 +83,7 @@ namespace Monsters_and_Sweatpants
 
         }
 
+        // for generating a defense card mid-game
         public static DefenseCard GenerateDefenseCard(Player player)
         {
             Random r = new Random();

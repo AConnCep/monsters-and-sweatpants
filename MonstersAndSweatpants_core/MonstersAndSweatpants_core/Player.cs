@@ -85,8 +85,16 @@ namespace Monsters_and_Sweatpants
             }
             else
             {
-                Console.WriteLine("You are all out of attack cards. Generating one for you...");
-                MountCard(CardDealer.GenerateAttackCard(this));
+                if (playerDefenseCards.Count > 0)
+                {
+                    Console.WriteLine("You are all out of attack cards. You must play a defense card now");
+                    ChooseDefenseCard();
+                }
+                else 
+                {
+                    Console.WriteLine("You are all out of cards. Generating an attack card for you...");
+                    MountCard(CardDealer.GenerateAttackCard(this));
+                }
                 return false;
             }
         }
@@ -108,8 +116,16 @@ namespace Monsters_and_Sweatpants
             }
             else
             {
-                Console.WriteLine("You are all out of defense cards. Generating one for you...");
-                MountCard(CardDealer.GenerateDefenseCard(this));
+                if (playerAttackCards.Count > 0)
+                {
+                    Console.WriteLine("You are all out of defense cards. You must play an attack card now");
+                    ChooseAttackCard();
+                }
+                else 
+                {
+                    Console.WriteLine("You are all out of cards. Generating a defense card for you...");
+                    MountCard(CardDealer.GenerateDefenseCard(this));
+                }
                 return false;
             }
         }

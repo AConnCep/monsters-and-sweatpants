@@ -121,7 +121,7 @@ namespace Monsters_and_Sweatpants
             }
             catch (MonsterDiedException)
             {
-                throw new UserKilled();
+                throw new AIKilled();
             }
             Console.WriteLine("Your opponent misses the monster");
             return false;
