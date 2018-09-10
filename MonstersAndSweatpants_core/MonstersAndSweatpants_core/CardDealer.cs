@@ -46,6 +46,13 @@ namespace Monsters_and_Sweatpants
             defenseCards.Add(new LvlOneDCard());
         }
 
+        public static void ResetDealer()
+        {
+            attackCards.Clear();
+            defenseCards.Clear();
+            StockDeck();
+        }
+
         public static void GenerateCard(Player player, CardType cardType)
         {
             Random r = new Random();

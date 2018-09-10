@@ -110,17 +110,12 @@ namespace Monsters_and_Sweatpants
         {
             if (base.Defend(monsterStrength))
             {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
                 Console.WriteLine("You've successfully defended yourself against the monster!");
-                Console.BackgroundColor = ConsoleColor.Black;
                 return true;
             }
             else
             {
-                Console.BackgroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("You've been hit! You lose " + monsterStrength + " HP");
-                Console.BackgroundColor = ConsoleColor.Black;
                 PrintPlayerHealth();
                 return false;
             }
